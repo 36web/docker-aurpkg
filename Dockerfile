@@ -8,7 +8,7 @@ LABEL maintainer="36web.rocks@gmail.com" \
 
 COPY aurpkg.sh /
 
-RUN useradd -M aur \
+RUN useradd -m aur \
   && mkdir /pkg \
   && chown aur:aur /pkg \
   && echo 'aur ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers.d/aur \
