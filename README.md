@@ -18,7 +18,7 @@ docker pull 36web/aurpkg
 docker run --rm --init -v $PWD:/pkg -e USER_ID=`id -u` -e GROUP_ID=`id -g` 36web/aurpkg PACKAGE_NAME
 ```
 
-replace PACKAGE_NAME with the name of your desired package on [AUR].
+replace *PACKAGE_NAME* with the name of your desired package on [AUR].
 
 example:
 
@@ -26,7 +26,7 @@ example:
 docker run --rm --init -v $PWD:/pkg -e USER_ID=`id -u` -e GROUP_ID=`id -g` 36web/aurpkg telegram-desktop-bin
 ```
 
-Docker will build the package and put it in the directory named as PACKAGE_NAME with PKGBUILD for package details.
+Docker will build the package and put it in the directory named as *PACKAGE_NAME* with *PKGBUILD* for package details.
 You may later install the package with
 
 ```shell
