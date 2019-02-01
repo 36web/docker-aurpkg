@@ -1,8 +1,8 @@
-# aurpkg
+# 36web/aurpkg
 
-Ever wanted to install an [AUR] package but don't want to install all those build base-devel dependenices or just want to build an AUR package to install on other Arch environments without build dependenices?
+Ever wanted to install an [AUR] package but don't want to install all those *base-devel* dependencies or just want to build an AUR package to install on other Arch environments without build dependencies?
 
-Here's a Docker tool can do that for you.
+Here's a Docker tool can do it for you.
 
 ## Usage
 
