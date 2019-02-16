@@ -1,4 +1,4 @@
-FROM base/devel:latest
+FROM archlinux/base:latest
 
 LABEL maintainer="36web.rocks@gmail.com" \
   org.label-schema.name="AUR package builder" \
@@ -8,7 +8,8 @@ LABEL maintainer="36web.rocks@gmail.com" \
 
 COPY aurpkg.sh /
 
-RUN useradd -m aur \
+RUN pacman -Sy -dd --noconfirm --needed base-devel sudo tar \
+  && useradd -m aur \
   && mkdir /pkg \
   && chown aur:aur /pkg \
   && echo 'aur ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers.d/aur \
