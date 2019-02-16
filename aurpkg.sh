@@ -8,7 +8,7 @@ sudo pacman -Sy --noconfirm
 
 curl -sL https://aur.archlinux.org/cgit/aur.git/snapshot/$PACKAGE_NAME.tar.gz | tar -xz \
   && cd $PACKAGE_NAME \
-  && makepkg -s --noconfirm \
+  && makepkg -s --noconfirm --needed \
   && sudo mkdir -p /pkg/$PACKAGE_NAME \
   && sudo mv -f $(makepkg --packagelist) PKGBUILD /pkg/$PACKAGE_NAME/ \
   && sudo chown -R $USER_ID:$GROUP_ID /pkg/$PACKAGE_NAME
